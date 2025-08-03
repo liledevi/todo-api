@@ -1,0 +1,27 @@
+# Git関連
+.git
+.gitignore
+README.md
+
+# 環境変数
+.env
+.env.*
+!.env.example
+
+# ログと一時ファイル
+tmp/
+log/
+
+# OS関連
+.DS_Store
+
+# Node.js関連（後でReactを追加する場合）
+node_modules/
+
+# テストカバレッジ
+coverage/
+.rspec_status
+
+# エディタ設定
+.vscode/
+.idea/
