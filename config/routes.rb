@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  # ヘルスチェック用のエンドポイント
-  get '/health', to: 'application#health'
+  namespace :api do
+    namespace :v1 do
+      get '/health', to: 'application#health'
+    end
+  end
 end
