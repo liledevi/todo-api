@@ -40,6 +40,6 @@ end
 # ===== テスト環境専用 =====
 group :test do
   gem 'database_cleaner-active_record'       # テスト後のDB掃除
-  gem 'shoulda-matchers', '~> 5.0'           # テストを簡潔に書ける
+  gem 'shoulda-matchers', '~> 6.5'           # テストを簡潔に書ける
   gem 'simplecov', require: false            # テストカバレッジ測定
 end
