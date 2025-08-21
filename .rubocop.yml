@@ -1,8 +1,30 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+# RuboCopの設定ファイル
+# チーム全体でコーディングスタイルを統一するため
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+require:
+  - rubocop-rails      # Rails用のルール
+  - rubocop-rspec      # RSpec用のルール
+
+AllCops:
+  NewCops: enable      # 新しいルールを自動で有効化
+  Exclude:             # チェック対象外のファイル
+    - 'db/**/*'        # マイグレーションファイル
+    - 'bin/**/*'       # 実行ファイル
+    - 'config/**/*'    # 設定ファイル
+    - 'vendor/**/*'    # 外部ライブラリ
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+
+# クラスやモジュールのコメントは不要
+Style/Documentation:
+  Enabled: false
+
+# frozen_string_literal コメントは不要
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# RSpecのブロックは長くなりがち
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/routes.rb'
