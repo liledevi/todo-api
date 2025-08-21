@@ -25,7 +25,7 @@ group :development, :test do
   gem 'dotenv-rails'                         # 環境変数を.envファイルで管理
   gem 'factory_bot_rails'                    # テストデータ作成を簡単に
   gem 'faker'                                # ダミーデータ生成（テスト用）
-  gem 'rspec-rails', '~> 6.0' # テストフレームワーク（RSpec）
+  gem 'rspec-rails', '~> 8.0' # テストフレームワーク（RSpec）
 end
 
 # ===== 開発環境専用 =====
